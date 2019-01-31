@@ -9,8 +9,7 @@
     margin: 0 auto;
 }
 
-h1,
-h2 {
+.title {
     text-align: center;
 }
 
@@ -21,7 +20,7 @@ h2 {
 }
 
 .social-media > a > img {
-    margin-right: 15px;
+    margin: 0 10px;
 }
 
 .card {
@@ -39,4 +38,26 @@ h2 {
 
 .card:nth-child(odd) {
     background-color: blue;
+}
+
+@media only screen and (min-width: 768px) {
+    .content-container {
+        display: grid;
+        grid: auto-flow / repeat(2, 1fr);
+    }
+
+    .title,
+    .social-media {
+        grid-column: 1 / -1;
+    }
+
+    .card {
+        margin: 15px;
+    }
+}
+
+@media only screen and (min-width: 1268px) {
+    .content-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
