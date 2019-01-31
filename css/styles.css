@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media > a > img {
+    margin-right: 15px;
+}
+
+.card {
+    height: 15vh;
+    margin: 10px 0;
+}
+
+/*
+    Temporary styles to view grid content
+*/
+
+.card:nth-child(even) {
+    background-color: red;
+}
+
+.card:nth-child(odd) {
+    background-color: blue;
+}
