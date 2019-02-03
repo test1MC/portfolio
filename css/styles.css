@@ -23,9 +23,31 @@
     margin: 0 10px;
 }
 
+/*
+Place clip-path and background-size in a generic .card keyframe animation
+*/
 .card {
     height: 15vh;
     margin: 10px 0;
+    background-size: contain;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 45% 100%, 0% 100%);
+}
+
+.site-name {
+    color: black;
+    font-size: 40px;
+}
+
+h1 {
+    font-size: 5vmin;
+}
+
+h2 {
+    font-size: 4vmin;
+}
+
+.sample {
+    background-image: url("../img/sample-card.png");
 }
 
 /*
@@ -33,11 +55,11 @@
 */
 
 .card:nth-child(even) {
-    background-color: red;
+    background-color: lightpink;
 }
 
 .card:nth-child(odd) {
-    background-color: blue;
+    background-color: lightblue;
 }
 
 @media only screen and (min-width: 768px) {
