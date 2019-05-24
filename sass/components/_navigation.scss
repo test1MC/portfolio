@@ -1,0 +1,78 @@
+.navigation {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: var(--color-secondary);
+    padding: 1rem;
+
+    @include medium(sm) {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 25vw;
+        padding-top: 3rem;
+    }
+
+    @include medium(md) {
+        width: 28rem;
+    }
+
+    &__about {
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        margin-top: 3rem;
+
+        @include medium(sm) {
+            flex-direction: column;
+        }
+
+        & > li {
+            cursor: pointer;
+            text-transform: uppercase;
+            -webkit-background-clip: text;
+            // Transparent from 0 to 50% for text filling effect
+            background-image: linear-gradient(to right, transparent 0%, var(--color-tertiary) 50%, var(--color-tertiary) 100%);
+            // Size up background to contain text
+            background-size: 200%;
+            transition: all .4s;
+
+            &:hover {
+                // Move background image left to right
+                background-position: -100%;
+                color: transparent;
+            }
+        }
+
+        & > li:not(:first-child) {
+            margin-left: 1rem;
+
+            @include medium(sm) {
+                margin-left: 0;
+            }
+        }
+
+        & > li:not(:last-child) {
+
+            @include medium(sm) {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+    }
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+
+    @include medium(sm) {
+        display: block;
+        margin: 0 auto;
+    }
+}

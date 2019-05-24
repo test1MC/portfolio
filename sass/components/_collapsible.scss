@@ -1,0 +1,40 @@
+.collapsible {
+    background-color: var(--color-marble);
+    box-shadow: 0 .1rem 1.1rem rgba(#000, .1);
+
+    &__header {
+        padding: 2rem 0;
+    }
+
+    &__body {
+        display: none;
+    }
+
+    &__icon {
+        padding-left: 1rem;
+    }
+
+    &__icon::before,
+    &__icon::after {
+        content: "";
+        width: 1rem;
+        height: .2rem;
+        background-color: orangered;
+        display: inline-block;
+        position: relative;
+    }
+
+    &__icon::before {
+        top: -.2rem;
+    }
+
+    &__icon::after {
+        left: -1rem;
+        top: -.16rem;
+        transform: rotate(90deg);
+    }
+}
+
+.active {
+    display: block;
+}

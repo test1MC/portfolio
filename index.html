@@ -1,34 +1,47 @@
 <!DOCTYPE html>
+
 <html>
     <head>
-        <link href="css/styles.css" rel="stylesheet">
+        <script src="scripts/index.js" defer></script>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="content-container">
+        <div class="grid">
 
-            <div class="title">
-                <h1>Ielich Balababa</h1>
-                <h2>Front-End Web Developer</h2>
-            </div>
-            
-            <div class="social-media">
-                <a href="https://github.com/ielich">
-                    <img src="img/github.png">
-                </a>
-                <a href="https://www.linkedin.com/">
-                    <img src="img/linkedin.png">
-                </a>
-                <a href="mailto:fill">
-                    <img src="img/gmail.png">
-                </a>
-            </div>
+            <nav class="navigation">
+                <img src="../img/headshot.jpg" alt="Profile Picture" class="profile-picture">
+                <p class="navigation__about">I am a prospective front-end web developer working at x company. I specialize in CSS and JavaScript, currently learning Angular.</p>
+                <ul class="navigation__menu">
+                    <li>Projects</li>
+                    <li>About</li>
+                    <li>Github</li>
+                    <li>Linkedin</li>
+                </ul>
+            </nav>
 
-            <div class="card sample">
-                <p class="site-name">This is a test</p>
+            <div class="content">
+                <div class="collapsible">
+                    <div class="collapsible__header">
+                        <span class="collapsible__icon"></span>
+                        <span>Portfolio</span>
+                    </div>
+                    <div class="collapsible__body">
+                        Container for image
+                        <p>HTML, CSS, JavaScript</p>
+                        <p>Hosted on Digital Ocean. Main domain acting as a hub for personal projects. Makes use of common architecture to better learn organization.</p>
+                        <div>Github | Website</div>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible__header">
+                        <span class="collapsible__icon"></span>
+                        Lookbook
+                    </div>
+                    <div class="collapsible__body">Sub-domain of portfolio website to demonstrate CSS animations.</div>
+                </div>
             </div>
-            <div class="card">2</div>
-            <div class="card">3</div>
-            <div class="card">4</div>
 
         </div>
     </body>

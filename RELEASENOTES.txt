@@ -1,0 +1,6 @@
+5-23-19
+- Initial setup of grid
+- Collapsible js function currently in temporary file.
+- Added navigation item text fill animation
+
+! Setup webpack for js architecture

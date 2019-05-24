@@ -1,0 +1,158 @@
+:root {
+  --color-primary: #e6e7e8;
+  --color-secondary: #303030;
+  --color-tertiary: #ffa500;
+  --color-grey: #eeedee;
+  --color-marble: #e6e7e8; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Poppins', sans-serif; }
+
+.navigation__menu {
+  color: var(--color-grey);
+  font-size: 1.4rem; }
+
+.navigation__about {
+  color: var(--color-grey);
+  font-size: 1.2rem; }
+
+.collapsible {
+  background-color: var(--color-marble);
+  box-shadow: 0 0.1rem 1.1rem rgba(0, 0, 0, 0.1); }
+  .collapsible__header {
+    padding: 2rem 0; }
+  .collapsible__body {
+    display: none; }
+  .collapsible__icon {
+    padding-left: 1rem; }
+  .collapsible__icon::before, .collapsible__icon::after {
+    content: "";
+    width: 1rem;
+    height: .2rem;
+    background-color: orangered;
+    display: inline-block;
+    position: relative; }
+  .collapsible__icon::before {
+    top: -.2rem; }
+  .collapsible__icon::after {
+    left: -1rem;
+    top: -.16rem;
+    transform: rotate(90deg); }
+
+.active {
+  display: block; }
+
+.navigation {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background-color: var(--color-secondary);
+  padding: 1rem; }
+  @media only screen and (min-width: 37.5em) {
+    .navigation {
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 25vw;
+      padding-top: 3rem; } }
+  @media only screen and (min-width: 70em) {
+    .navigation {
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 25vw;
+      padding-top: 3rem; } }
+  @media only screen and (min-width: 70em) {
+    .navigation {
+      width: 28rem; } }
+  .navigation__about {
+    margin-top: 3rem;
+    text-align: center; }
+  .navigation__menu {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 3rem; }
+    @media only screen and (min-width: 37.5em) {
+      .navigation__menu {
+        flex-direction: column; } }
+    @media only screen and (min-width: 70em) {
+      .navigation__menu {
+        flex-direction: column; } }
+    .navigation__menu > li {
+      -webkit-background-clip: text;
+      text-transform: uppercase;
+      background-image: linear-gradient(to right, transparent 0%, var(--color-tertiary) 50%, var(--color-tertiary) 100%);
+      background-size: 200%;
+      transition: all .4s;
+      cursor: pointer; }
+      .navigation__menu > li:hover {
+        background-position: -100%;
+        color: transparent; }
+    .navigation__menu > li:not(:first-child) {
+      margin-left: 1rem; }
+      @media only screen and (min-width: 37.5em) {
+        .navigation__menu > li:not(:first-child) {
+          margin-left: 0; } }
+      @media only screen and (min-width: 70em) {
+        .navigation__menu > li:not(:first-child) {
+          margin-left: 0; } }
+    @media only screen and (min-width: 37.5em) {
+      .navigation__menu > li:not(:last-child) {
+        margin-bottom: 1.5rem; } }
+    @media only screen and (min-width: 70em) {
+      .navigation__menu > li:not(:last-child) {
+        margin-bottom: 1.5rem; } }
+
+.profile-picture {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem; }
+  @media only screen and (min-width: 37.5em) {
+    .profile-picture {
+      display: block;
+      margin: 0 auto; } }
+  @media only screen and (min-width: 70em) {
+    .profile-picture {
+      display: block;
+      margin: 0 auto; } }
+
+.grid {
+  display: grid;
+  grid-template-rows: 1fr auto; }
+  @media only screen and (min-width: 37.5em) {
+    .grid {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: 100vh; } }
+  @media only screen and (min-width: 70em) {
+    .grid {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: 100vh; } }
+
+.navigation {
+  grid-row: 1 / 2; }
+  @media only screen and (min-width: 37.5em) {
+    .navigation {
+      grid-column: 1 / 2; } }
+  @media only screen and (min-width: 70em) {
+    .navigation {
+      grid-column: 1 / 2; } }
+
+.content {
+  grid-row: 2 / -1; }
+  @media only screen and (min-width: 37.5em) {
+    .content {
+      grid-column: 2 / -1;
+      grid-row: 1 / 2; } }
+  @media only screen and (min-width: 70em) {
+    .content {
+      grid-column: 2 / -1;
+      grid-row: 1 / 2; } }

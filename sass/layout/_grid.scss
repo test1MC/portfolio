@@ -1,0 +1,26 @@
+.grid {
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+    @include medium(sm) {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 100vh;
+    }
+}
+
+.navigation {
+    grid-row: 1 / 2;
+
+    @include medium(sm) {
+        grid-column: 1 / 2;
+    }
+}
+
+.content {
+    grid-row: 2 / -1;
+
+    @include medium(sm) {
+        grid-column: 2 / -1;
+        grid-row: 1 / 2;
+    }
+}

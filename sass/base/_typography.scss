@@ -1,0 +1,16 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.navigation {
+    &__menu {
+        color: var(--color-grey);
+        font-size: 1.4rem;
+    }
+
+    &__about {
+        color: var(--color-grey);
+        font-size: 1.2rem;
+    }
+}
